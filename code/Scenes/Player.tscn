@@ -1,3 +1,158 @@
-[gd_scene format=3 uid="uid://dg0458t8beexf"]
+[gd_scene load_steps=19 format=3 uid="uid://dg0458t8beexf"]
+
+[ext_resource type="Texture2D" uid="uid://csbvdoxenep31" path="res://Assets/Player/player.png" id="1_fnipp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy6dj"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hvcs"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6f4a"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ladis"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(96, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yyf2y"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_24x2d"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_womaq"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxvsx"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aonug"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amma5"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5h227"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo5qu"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t0f5"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2gbm"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia6kt"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_02ffa"]
+atlas = ExtResource("1_fnipp")
+region = Rect2(96, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o0ii8"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"anim_death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy6dj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hvcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6f4a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ladis")
+}],
+"loop": true,
+"name": &"anim_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yyf2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_24x2d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_womaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxvsx")
+}],
+"loop": true,
+"name": &"anim_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aonug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amma5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5h227")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eo5qu")
+}],
+"loop": true,
+"name": &"anim_side",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t0f5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2gbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ia6kt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_02ffa")
+}],
+"loop": true,
+"name": &"anim_up",
+"speed": 5.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(500, 250)
+scale = Vector2(2, 2)
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o0ii8")
+animation = &"anim_side"
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+limit_left = 0
+limit_top = 0
