@@ -4,10 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://csbvdoxenep31" path="res://Assets/Player/player.png" id="1_fnipp"]
 [ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="3_juvi7"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uce2t"]
-radius = 4.33333
-height = 14.6667
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_86giu"]
 atlas = ExtResource("1_fnipp")
 region = Rect2(0, 96, 32, 32)
@@ -148,6 +144,10 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uce2t"]
+radius = 4.33333
+height = 14.6667
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 texture_repeat = 1
@@ -155,12 +155,12 @@ position = Vector2(250, 150)
 scale = Vector2(1.3, 1.3)
 script = ExtResource("1_f35pn")
 
-[node name="Hitbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_uce2t")
-
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o0ii8")
 animation = &"anim_up"
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_uce2t")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
