@@ -14,6 +14,11 @@ config/name="darknes"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=640
+window/size/viewport_height=320
+
 [editor]
 
 version_control/plugin_name="GitPlugin"
