@@ -151,7 +151,7 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 texture_repeat = 1
-position = Vector2(500, 250)
+position = Vector2(250, 150)
 scale = Vector2(1.3, 1.3)
 script = ExtResource("1_f35pn")
 
@@ -174,3 +174,5 @@ energy = 0.8
 shadow_enabled = true
 texture = ExtResource("3_juvi7")
 texture_scale = 0.6
+
+[node name="AudioListener" type="AudioListener2D" parent="."]
