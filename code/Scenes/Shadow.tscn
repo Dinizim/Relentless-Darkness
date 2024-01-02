@@ -60,4 +60,4 @@ z_index = 1
 position = Vector2(254, 201)
 
 [node name="AmbientColor" type="CanvasModulate" parent="."]
-color = Color(0.388235, 0.388235, 0.388235, 1)
+color = Color(0.341176, 0.341176, 0.341176, 1)
