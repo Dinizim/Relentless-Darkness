@@ -1,6 +1,10 @@
-[gd_scene load_steps=19 format=3 uid="uid://dg0458t8beexf"]
+[gd_scene load_steps=20 format=3 uid="uid://dg0458t8beexf"]
 
 [ext_resource type="Texture2D" uid="uid://csbvdoxenep31" path="res://Assets/Player/player.png" id="1_fnipp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uce2t"]
+radius = 4.33333
+height = 14.6667
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wy6dj"]
 atlas = ExtResource("1_fnipp")
@@ -143,16 +147,19 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+texture_filter = 1
+texture_repeat = 1
 position = Vector2(500, 250)
-scale = Vector2(2, 2)
+scale = Vector2(3, 3)
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_uce2t")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o0ii8")
 animation = &"anim_side"
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
