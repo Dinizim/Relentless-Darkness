@@ -163,7 +163,7 @@ sprite_frames = SubResource("SpriteFrames_o0ii8")
 animation = &"anim_up"
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(3, 3)
 limit_left = 0
 limit_top = 0
 

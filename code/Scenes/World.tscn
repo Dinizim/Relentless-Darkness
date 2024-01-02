@@ -930,7 +930,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_6mu3b")
 sources/3 = SubResource("TileSetAtlasSource_pb6qj")
 
-[node name="MapTest" type="Node2D"]
+[node name="World" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 modulate = Color(0.109804, 0.0784314, 0.0823529, 1)
