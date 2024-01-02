@@ -163,13 +163,14 @@ sprite_frames = SubResource("SpriteFrames_o0ii8")
 animation = &"anim_up"
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(5, 5)
+zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
 
 [node name="Light" type="PointLight2D" parent="."]
-energy = 0.6
+position = Vector2(1.52588e-05, 1.53846)
+scale = Vector2(1.79788, 1.14683)
+energy = 0.8
 shadow_enabled = true
 texture = ExtResource("3_juvi7")
-texture_scale = 0.8
-height = 100.0
+texture_scale = 0.6
