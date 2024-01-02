@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://but8xjakuyiou"]
+[gd_scene load_steps=8 format=3 uid="uid://but8xjakuyiou"]
 
 [ext_resource type="Texture2D" uid="uid://cqlt072lqpjns" path="res://Assets/Tilemap Test/dungeon.png" id="1_pvvrm"]
 [ext_resource type="PackedScene" uid="uid://dg0458t8beexf" path="res://Scenes/Player.tscn" id="2_dijle"]
 [ext_resource type="PackedScene" uid="uid://o04c5kreiinq" path="res://Scenes/Enemy.tscn" id="3_3v3qx"]
+[ext_resource type="PackedScene" uid="uid://dn5qt0ktu5b12" path="res://Assets/Enemy/ghost.tscn" id="4_b3agn"]
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ycn26"]
 polygon = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
@@ -57,6 +58,7 @@ layer_2/z_index = 1
 layer_2/tile_data = PackedInt32Array(327692, 65536, 1, 393228, 65536, 1, 458764, 65536, 1, 524300, 65536, 1, 589836, 65536, 1, 655372, 65536, 1, 720908, 65536, 1, 786444, 65536, 1, 851980, 65536, 1, 917516, 65536, 1, 983052, 65536, 1, 327693, 65536, 1, 327694, 65536, 1, 327695, 65536, 1, 327696, 65536, 1, 327697, 65536, 1, 327698, 65536, 1, 327699, 65536, 1, 327700, 65536, 1, 327701, 65536, 1, 327702, 65536, 1, 327703, 65536, 1, 327704, 65536, 1, 327705, 65536, 1, 327706, 65536, 1, 327707, 65536, 1, 327708, 65536, 1, 589860, 65536, 1, 655396, 65536, 1, 720932, 65536, 1, 786468, 65536, 1, 852004, 65536, 1, 917540, 65536, 1, 983076, 65536, 1, 1048612, 65536, 1, 1114148, 65536, 1, 1179684, 65536, 1, 1179685, 65536, 1, 1179686, 65536, 1, 1179687, 65536, 1, 1179688, 65536, 1, 1179689, 65536, 1, 1179690, 65536, 1, 1179691, 65536, 1, 1179692, 65536, 1, 1179693, 65536, 1, 1114157, 65536, 1, 1048621, 65536, 1, 983085, 65536, 1, 917549, 65536, 1, 852013, 65536, 1, 786477, 65536, 1, 720941, 65536, 1, 655405, 65536, 1, 589869, 65536, 1, 1441809, 65536, 1, 1441810, 65536, 1, 1441811, 65536, 1, 1441812, 65536, 1, 1441813, 65536, 1, 1441814, 65536, 1, 1441815, 65536, 1, 1441816, 65536, 1, 1441817, 65536, 1, 1376282, 65536, 1, 1376283, 65536, 1, 1376284, 65536, 1, 1376285, 65536, 1, 1376286, 65536, 1, 1376287, 65536, 1, 1376288, 65536, 1, 1376289, 65536, 1)
 
 [node name="AmbientColor" type="CanvasModulate" parent="."]
+scale = Vector2(0.617297, 1.08148)
 color = Color(0.239216, 0.239216, 0.239216, 1)
 
 [node name="Player" parent="." instance=ExtResource("2_dijle")]
@@ -65,3 +67,7 @@ position = Vector2(254, 201)
 
 [node name="Enemy" parent="." instance=ExtResource("3_3v3qx")]
 position = Vector2(450, 180)
+
+[node name="Ghost" parent="." instance=ExtResource("4_b3agn")]
+texture_filter = 1
+position = Vector2(306, 178)

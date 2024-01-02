@@ -157,7 +157,7 @@ script = ExtResource("1_f35pn")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_o0ii8")
-animation = &"anim_up"
+animation = &"anim_idle"
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_uce2t")
