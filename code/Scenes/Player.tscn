@@ -1,8 +1,9 @@
-[gd_scene load_steps=22 format=3 uid="uid://dg0458t8beexf"]
+[gd_scene load_steps=23 format=3 uid="uid://dg0458t8beexf"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_f35pn"]
 [ext_resource type="Texture2D" uid="uid://csbvdoxenep31" path="res://Assets/Player/player.png" id="1_fnipp"]
 [ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="3_juvi7"]
+[ext_resource type="PackedScene" uid="uid://c6lhnadrvgycy" path="res://Scenes/Hud.tscn" id="3_x11cr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86giu"]
 atlas = ExtResource("1_fnipp")
@@ -166,6 +167,13 @@ shape = SubResource("CapsuleShape2D_uce2t")
 zoom = Vector2(4, 4)
 limit_left = 0
 limit_top = 0
+
+[node name="Hud" parent="Camera" instance=ExtResource("3_x11cr")]
+texture_filter = 2
+offset_left = -170.0
+offset_top = -95.0
+offset_right = -167.0
+offset_bottom = -95.0
 
 [node name="Light" type="PointLight2D" parent="."]
 position = Vector2(1.52588e-05, 1.53846)

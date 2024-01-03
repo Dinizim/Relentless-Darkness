@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6lhnadrvgycy"]
+
+[ext_resource type="Script" path="res://Scripts/Hud.gd" id="1_cqu1u"]
+
+[node name="Hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 6.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cqu1u")
+
+[node name="Player_Health" type="Label" parent="."]
+light_mask = 7
+visibility_layer = 7
+z_index = 10
+texture_filter = 2
+layout_mode = 1
+offset_right = 92.0
+offset_bottom = 27.0
+text = "0"
