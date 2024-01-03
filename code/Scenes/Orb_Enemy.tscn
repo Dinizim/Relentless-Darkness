@@ -44,7 +44,7 @@ _data = {
 "idle": SubResource("Animation_r7xlh")
 }
 
-[node name="Enemy" type="CharacterBody2D" groups=["Enemies"]]
+[node name="Orb" type="CharacterBody2D"]
 script = ExtResource("1_wh0r8")
 
 [node name="Body" type="Sprite2D" parent="."]
