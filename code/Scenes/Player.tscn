@@ -167,10 +167,9 @@ offset_bottom = -95.0
 visible = false
 position = Vector2(1.52588e-05, 1.53846)
 scale = Vector2(1.79788, 1.14683)
-energy = 0.8
+energy = 0.1
 shadow_enabled = true
 texture = ExtResource("3_juvi7")
-texture_scale = 0.6
 
 [node name="AudioListener" type="AudioListener2D" parent="."]
 
