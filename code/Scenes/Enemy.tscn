@@ -9,6 +9,9 @@ radius = 5.0
 [sub_resource type="Animation" id="Animation_e45ji"]
 length = 0.001
 
+[sub_resource type="Animation" id="Animation_e45ji"]
+length = 0.001
+
 [sub_resource type="Animation" id="Animation_r7xlh"]
 resource_name = "idle"
 length = 2.0

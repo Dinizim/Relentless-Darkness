@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://dn5qt0ktu5b12"]
+
+[ext_resource type="Script" path="res://Assets/Enemy/ghost.gd" id="1_bl4pr"]
+[ext_resource type="Texture2D" uid="uid://tgw5y6qf4ghw" path="res://Assets/Enemy/wraith.png" id="1_k42sq"]
+[ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="1_m63xd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjp63"]
+radius = 4.33333
+height = 14.6667
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0pnl"]
+atlas = ExtResource("1_k42sq")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjchy"]
+atlas = ExtResource("1_k42sq")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f205o"]
+atlas = ExtResource("1_k42sq")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx2ni"]
+atlas = ExtResource("1_k42sq")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_edpfu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0pnl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjchy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f205o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx2ni")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Ghost" type="CharacterBody2D"]
+modulate = Color(0.545098, 0.545098, 0.545098, 1)
+script = ExtResource("1_bl4pr")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(1.52588e-05, 1.53846)
+scale = Vector2(1.79788, 1.14683)
+color = Color(0.54902, 0, 0.0941176, 1)
+energy = 1.3
+texture = ExtResource("1_m63xd")
+texture_scale = 0.1
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_yjp63")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_edpfu")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.957559
