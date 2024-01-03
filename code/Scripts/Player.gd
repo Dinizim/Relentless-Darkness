@@ -21,7 +21,7 @@ func get_input():
 			$Animation.play("run")
 
 		Vector2.ZERO:
-			$Animation.play("anim_idle")
+			$Animation.play("idle")
 
 	velocity = input_direction * Global.player_speed
 
