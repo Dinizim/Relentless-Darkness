@@ -70,6 +70,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_edpfu")
 animation = &"anim_idle"
 autoplay = "anim_idle"
+frame_progress = 0.0718927
 
 [node name="Area2D" type="Area2D" parent="."]
 
