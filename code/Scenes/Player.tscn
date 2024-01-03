@@ -219,9 +219,9 @@ limit_top = 0
 
 [node name="Hud" parent="Camera" instance=ExtResource("3_x11cr")]
 texture_filter = 2
-offset_left = -170.0
+offset_left = 150.0
 offset_top = -95.0
-offset_right = -167.0
+offset_right = 153.0
 offset_bottom = -95.0
 
 [node name="Light" type="PointLight2D" parent="."]

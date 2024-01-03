@@ -54,6 +54,7 @@ scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_sxil5")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-2, -11)
 scale = Vector2(1.5, 1.5)
 shape = SubResource("CircleShape2D_7jysu")
@@ -66,5 +67,8 @@ libraries = {
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Hitbox_Area" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1, -11)
+position = Vector2(-1.60055, -10.3035)
+scale = Vector2(1.1, 1.1)
 shape = SubResource("CircleShape2D_7jysu")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -31,6 +31,9 @@ func apply_damage():
 	if Input.is_action_just_pressed("ui_attack"):
 		$Sword_Animation.play("slash")
 
+func take_damage(damage):
+	Global.player_health -= damage
+
 func _on_weapon_area_body_entered(body):
 	if body.is_in_group("Enemies"):
 		body.take_damage(Global.sword_damage)
