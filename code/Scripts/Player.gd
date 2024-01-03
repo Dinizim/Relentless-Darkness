@@ -9,18 +9,16 @@ func get_input():
 	
 	match input_direction:
 		Vector2.RIGHT:
-			$Animation.play("anim_side")
-			$Animation.flip_h = false
+			$Animation.play("run")
 
 		Vector2.LEFT:
-			$Animation.play("anim_side")
-			$Animation.flip_h = true
+			$Animation.play("run")
 
 		Vector2.DOWN:
-			$Animation.play("anim_side")
+			$Animation.play("run")
 
 		Vector2.UP:
-			$Animation.play("anim_side")
+			$Animation.play("run")
 
 		Vector2.ZERO:
 			$Animation.play("anim_idle")
