@@ -3,6 +3,9 @@ extends CharacterBody2D
 @onready var _animation_player = $Animation
 var orb_health = Global.orb_health
 
+func take_damage(damage):
+	orb_health -= damage
+
 func _physics_process(_delta):
 	_animation_player.play("idle")
 	
