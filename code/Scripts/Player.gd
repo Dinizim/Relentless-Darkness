@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed = 200
-var sword_damage = Global.player_damage
+var sword_damage = Global.sword_damage
 
 func _ready():
 	$Weapon_Area.visible = false
@@ -35,8 +35,9 @@ func apply_damage():
 		$Sword_Animation.play("slash")
 
 func _on_weapon_area_body_entered(body):
-	if body.has_method("enemy"):
-		body.orb_health -= 10
+	if body.is_in_group("Enemies"):
+		body.orb_health -= sword_damage
+		body.ghost_health -= sword_damage
 
 func _physics_process(_delta):
 	apply_damage()
