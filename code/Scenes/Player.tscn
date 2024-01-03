@@ -1,9 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dg0458t8beexf"]
+[gd_scene load_steps=28 format=3 uid="uid://dg0458t8beexf"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_f35pn"]
 [ext_resource type="Texture2D" uid="uid://csbvdoxenep31" path="res://Assets/Player/player.png" id="1_fnipp"]
 [ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="3_juvi7"]
 [ext_resource type="PackedScene" uid="uid://c6lhnadrvgycy" path="res://Scenes/Hud.tscn" id="3_x11cr"]
+[ext_resource type="Texture2D" uid="uid://dxld2gynd2gk4" path="res://Assets/Player/Sword Effect/effect01.png" id="5_6av3o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_86giu"]
 atlas = ExtResource("1_fnipp")
@@ -149,6 +150,70 @@ animations = [{
 radius = 4.33333
 height = 14.6667
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqydk"]
+radius = 6.15385
+
+[sub_resource type="Animation" id="Animation_g5ipl"]
+resource_name = "slash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sword:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Weapon_Area/Weapon_Hitbox:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Weapon_Area:monitoring")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_ktexn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Weapon_Area:monitoring")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qcs1h"]
+_data = {
+"RESET": SubResource("Animation_ktexn"),
+"slash": SubResource("Animation_g5ipl")
+}
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 texture_repeat = 1
@@ -184,3 +249,24 @@ texture = ExtResource("3_juvi7")
 texture_scale = 0.6
 
 [node name="AudioListener" type="AudioListener2D" parent="."]
+
+[node name="Weapon_Area" type="Area2D" parent="."]
+monitoring = false
+
+[node name="Weapon_Hitbox" type="CollisionShape2D" parent="Weapon_Area"]
+visible = false
+position = Vector2(7.69231, 0)
+shape = SubResource("CircleShape2D_xqydk")
+
+[node name="Sword" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(4.61523, 0.769287)
+scale = Vector2(0.03, 0.0342308)
+texture = ExtResource("5_6av3o")
+
+[node name="Sword_Animation" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qcs1h")
+}
+
+[connection signal="body_entered" from="Weapon_Area" to="." method="_on_weapon_area_body_entered"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://dn5qt0ktu5b12"]
 
-[ext_resource type="Script" path="res://Assets/Enemy/ghost.gd" id="1_bl4pr"]
 [ext_resource type="Texture2D" uid="uid://tgw5y6qf4ghw" path="res://Assets/Enemy/wraith.png" id="1_k42sq"]
 [ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="1_m63xd"]
+[ext_resource type="Script" path="res://Scripts/Ghost_Enemy.gd" id="1_w0s74"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjp63"]
 radius = 4.33333
@@ -46,7 +46,7 @@ animations = [{
 
 [node name="Ghost" type="CharacterBody2D"]
 modulate = Color(0.545098, 0.545098, 0.545098, 1)
-script = ExtResource("1_bl4pr")
+script = ExtResource("1_w0s74")
 
 [node name="Light" type="PointLight2D" parent="."]
 position = Vector2(1.52588e-05, 1.53846)

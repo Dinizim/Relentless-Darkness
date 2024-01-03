@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clpxvnusmyw3t"
-path="res://.godot/imported/wraith.png-64b543745819063bd4486496993ef1cd.ctex"
+uid="uid://dn2whmb5nf5gx"
+path="res://.godot/imported/effect05.png-2e2a0309de62ebf412eedfde5ee8ea04.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/wraith.png"
-dest_files=["res://.godot/imported/wraith.png-64b543745819063bd4486496993ef1cd.ctex"]
+source_file="res://Assets/Player/Sword Effect/effect05.png"
+dest_files=["res://.godot/imported/effect05.png-2e2a0309de62ebf412eedfde5ee8ea04.ctex"]
 
 [params]
 
