@@ -17,10 +17,10 @@ func get_input():
 			$Animation.flip_h = true
 
 		Vector2.DOWN:
-			$Animation.play("anim_down")
+			$Animation.play("anim_side")
 
 		Vector2.UP:
-			$Animation.play("anim_up")
+			$Animation.play("anim_side")
 
 		Vector2.ZERO:
 			$Animation.play("anim_idle")
