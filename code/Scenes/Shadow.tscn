@@ -65,9 +65,9 @@ color = Color(0.239216, 0.239216, 0.239216, 1)
 z_index = 1
 position = Vector2(86, 129)
 
-[node name="Enemy" parent="." instance=ExtResource("3_3v3qx")]
+[node name="Orb" parent="." groups=["Enemies"] instance=ExtResource("3_3v3qx")]
 position = Vector2(89, 178)
 
-[node name="Ghost" parent="." instance=ExtResource("4_b3agn")]
+[node name="Ghost" parent="." groups=["Enemies"] instance=ExtResource("4_b3agn")]
 texture_filter = 1
 position = Vector2(435, 149)
