@@ -1,8 +1,5 @@
 extends CharacterBody2D
 
-@export var speed = 200
-var sword_damage = Global.sword_damage
-
 func _ready():
 	$Weapon_Area.visible = false
 	$Weapon_Area/Weapon_Hitbox.visible = false
@@ -28,7 +25,7 @@ func get_input():
 		Vector2.ZERO:
 			$Animation.play("anim_idle")
 
-	velocity = input_direction * speed
+	velocity = input_direction * Global.player_speed
 
 func apply_damage():
 	if Input.is_action_just_pressed("ui_attack"):
@@ -36,8 +33,7 @@ func apply_damage():
 
 func _on_weapon_area_body_entered(body):
 	if body.is_in_group("Enemies"):
-		body.orb_health -= sword_damage
-		body.ghost_health -= sword_damage
+		body.take_damage(Global.sword_damage)
 
 func _physics_process(_delta):
 	apply_damage()
