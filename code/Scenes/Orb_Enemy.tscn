@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Orb_Enemy.gd" id="1_wh0r8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7jysu"]
-radius = 6.0
+radius = 6.47694
 
 [sub_resource type="Animation" id="Animation_e45ji"]
 length = 0.001
@@ -45,18 +45,19 @@ _data = {
 }
 
 [node name="Orb" type="CharacterBody2D"]
+z_index = 1
 script = ExtResource("1_wh0r8")
 
 [node name="Body" type="Sprite2D" parent="."]
+z_index = 1
 texture_filter = 1
 position = Vector2(1.66297e-06, 0.200002)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("1_sxil5")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2(-2, -11)
-scale = Vector2(1.5, 1.5)
+z_index = 1
+position = Vector2(-1.44619, -10.2758)
 shape = SubResource("CircleShape2D_7jysu")
 
 [node name="Animation" type="AnimationPlayer" parent="."]
@@ -65,9 +66,11 @@ libraries = {
 }
 
 [node name="Area2D" type="Area2D" parent="."]
+z_index = 1
 
 [node name="Hitbox_Area" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.60055, -10.3035)
+z_index = 1
+position = Vector2(-1.47275, -10.3035)
 scale = Vector2(1.1, 1.1)
 shape = SubResource("CircleShape2D_7jysu")
 

@@ -74,7 +74,7 @@ autoplay = "anim_idle"
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Hitbox_Area" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-1.60055, -10.3035)
+position = Vector2(-1, 0)
 scale = Vector2(1.1, 1.1)
 shape = SubResource("CircleShape2D_o2whw")
 

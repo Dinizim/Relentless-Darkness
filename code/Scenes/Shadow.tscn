@@ -64,6 +64,8 @@ color = Color(0.239216, 0.239216, 0.239216, 1)
 [node name="Player" parent="." groups=["Player"] instance=ExtResource("2_dijle")]
 z_index = 1
 position = Vector2(86, 129)
+collision_layer = 3
+collision_mask = 3
 
 [node name="Orb" parent="." groups=["Enemies"] instance=ExtResource("3_3v3qx")]
 position = Vector2(89, 178)

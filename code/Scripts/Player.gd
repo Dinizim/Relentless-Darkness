@@ -33,6 +33,12 @@ func apply_damage():
 
 func take_damage(damage):
 	Global.player_health -= damage
+	knockback()
+
+func knockback():
+	var knockback_direction = -velocity.normalized() * Global.player_knockback_force
+	velocity = knockback_direction
+	move_and_slide() 
 
 func _on_weapon_area_body_entered(body):
 	if body.is_in_group("Enemies"):
