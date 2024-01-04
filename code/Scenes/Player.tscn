@@ -57,7 +57,11 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_23ry8"]
 resource_name = "run"
+<<<<<<< Updated upstream
 length = 0.70001
+=======
+length = 0.80001
+>>>>>>> Stashed changes
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -66,7 +70,11 @@ tracks/0/path = NodePath("Player:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
+<<<<<<< Updated upstream
 "times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 1.4),
+=======
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+>>>>>>> Stashed changes
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [24, 25, 26, 27, 28, 29, 30, 31]
@@ -122,8 +130,8 @@ _data = {
 }
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uce2t"]
-radius = 4.33333
-height = 14.6667
+radius = 8.0
+height = 26.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xqydk"]
 radius = 6.15385
@@ -132,7 +140,6 @@ radius = 6.15385
 texture_filter = 1
 texture_repeat = 1
 position = Vector2(250, 150)
-scale = Vector2(1.3, 1.3)
 script = ExtResource("1_f35pn")
 
 [node name="Player" type="Sprite2D" parent="."]
@@ -148,7 +155,7 @@ libraries = {
 }
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-visible = false
+position = Vector2(-1, 1)
 shape = SubResource("CapsuleShape2D_uce2t")
 
 [node name="Camera" type="Camera2D" parent="."]
@@ -164,10 +171,8 @@ offset_right = 153.0
 offset_bottom = -95.0
 
 [node name="Light" type="PointLight2D" parent="."]
-visible = false
 position = Vector2(1.52588e-05, 1.53846)
 scale = Vector2(1.79788, 1.14683)
-energy = 0.8
 shadow_enabled = true
 texture = ExtResource("3_juvi7")
 texture_scale = 0.6
@@ -176,8 +181,10 @@ texture_scale = 0.6
 
 [node name="Weapon_Area" type="Area2D" parent="."]
 visible = false
+monitoring = false
 
 [node name="Weapon_Hitbox" type="CollisionShape2D" parent="Weapon_Area"]
+visible = false
 position = Vector2(7.69231, 0)
 shape = SubResource("CircleShape2D_xqydk")
 
