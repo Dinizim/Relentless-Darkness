@@ -15,9 +15,9 @@ func _physics_process(delta):
 		velocity = position.direction_to(target.position) * Global.ghost_speed
 		
 		if (target.position.x - position.x) < 0:
-			$AnimatedSprite2D.flip_h = true
+			$Animation.flip_h = true
 		else:
-			$AnimatedSprite2D.flip_h = false
+			$Animation.flip_h = false
 		move_and_slide()
 
 func _on_area_2d_body_entered(body):
