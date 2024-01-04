@@ -16,4 +16,4 @@ extends Node
 # enemy ghost
 @export var ghost_health : int = 10
 @export var ghost_damage : int = 15
-@export var ghost_speed : int = 20
+@export var ghost_speed : int = 40

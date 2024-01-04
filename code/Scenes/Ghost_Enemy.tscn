@@ -1,43 +1,43 @@
 [gd_scene load_steps=11 format=3 uid="uid://dn5qt0ktu5b12"]
 
-[ext_resource type="Texture2D" uid="uid://tgw5y6qf4ghw" path="res://Assets/Enemy/wraith.png" id="1_k42sq"]
 [ext_resource type="Texture2D" uid="uid://dussya8ej17qx" path="res://Assets/Player/light.png" id="1_m63xd"]
 [ext_resource type="Script" path="res://Scripts/Ghost_Enemy.gd" id="1_w0s74"]
+[ext_resource type="Texture2D" uid="uid://d2tadcpm0bcwt" path="res://Assets/Enemy/wraith-Mod.png" id="3_xtirj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yjp63"]
 radius = 4.33333
 height = 14.6667
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n0pnl"]
-atlas = ExtResource("1_k42sq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq5tk"]
+atlas = ExtResource("3_xtirj")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xjchy"]
-atlas = ExtResource("1_k42sq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_fc6bk"]
+atlas = ExtResource("3_xtirj")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_f205o"]
-atlas = ExtResource("1_k42sq")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tx2ni"]
-atlas = ExtResource("1_k42sq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbyqn"]
+atlas = ExtResource("3_xtirj")
 region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi5c3"]
+atlas = ExtResource("3_xtirj")
+region = Rect2(32, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_edpfu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_n0pnl")
+"texture": SubResource("AtlasTexture_eq5tk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xjchy")
+"texture": SubResource("AtlasTexture_fc6bk")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f205o")
+"texture": SubResource("AtlasTexture_qbyqn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tx2ni")
+"texture": SubResource("AtlasTexture_hi5c3")
 }],
 "loop": true,
 "name": &"anim_idle",
@@ -70,7 +70,8 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_edpfu")
 animation = &"anim_idle"
 autoplay = "anim_idle"
-frame_progress = 0.0718927
+frame_progress = 0.00389318
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="."]
 
