@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tgw5y6qf4ghw"
-path="res://.godot/imported/wraith.png-01159f55dd5e3cd1fabf30c427f358b4.ctex"
+uid="uid://b6eqi66m734te"
+path="res://.godot/imported/EyeBall Monster-Shee-modt.png-d1c16f90c525e0b78feb45981b3d7db3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemy/wraith.png"
-dest_files=["res://.godot/imported/wraith.png-01159f55dd5e3cd1fabf30c427f358b4.ctex"]
+source_file="res://Assets/Enemy/EyeBall Monster-Shee-modt.png"
+dest_files=["res://.godot/imported/EyeBall Monster-Shee-modt.png-d1c16f90c525e0b78feb45981b3d7db3.ctex"]
 
 [params]
 
